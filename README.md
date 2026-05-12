@@ -258,3 +258,47 @@ This small program teaches several powerful C++ concepts:
 - console output
 
 These concepts are the foundation of advanced C++ programming.
+
+
+# Expected Output
+
+> Note: Memory addresses will be different on every computer.
+
+```text
+Hello World
+value of y = 14
+address of y = 0x61ff08
+pointer to y = 0x61ff08
+multiplyby 3 = 42
+```
+
+## Explanation of the Output
+
+| Output | Meaning |
+|---|---|
+| `Hello World` | Printed using `cout` |
+| `value of y = 14` | Displays the value stored in variable `y` |
+| `address of y = 0x61ff08` | Displays the memory address of `y` |
+| `pointer to y = 0x61ff08` | Pointer `p` stores the same address |
+| `multiplyby 3 = 42` | Function multiplies `14 × 3` |
+
+## Important Note
+
+These two lines usually display the same address:
+
+```text
+address of y = 0x61ff08
+pointer to y = 0x61ff08
+```
+
+Why?
+
+Because:
+
+```cpp
+int *p = &y;
+```
+
+means:
+
+> Store the address of `y` inside pointer `p`
